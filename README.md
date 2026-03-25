@@ -1,13 +1,37 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23272411)
-# CSSE6400 Week 5 Practical
+TaskOverflow Deployment
 
-Deploying our TaskOverflow application to EC2/ECS instances on AWS using Terraform.
+Project Overview
 
-Please see the [instructions](https://csse6400.uqcloud.net/practicals/week05.pdf) for more details.
-
-Update this README file with appropriate information about your project,
-including how to run it.
-
-There are [resources](https://www.makeareadme.com) available to help you write a good README file.
+This project deploys the TaskOverflow application to AWS using Terraform.
+The application is containerised using Docker and runs on AWS ECS (Fargate), with a PostgreSQL database hosted on AWS RDS.
 
 
+Technologies Used
+1.Python (Flask)
+2.Docker
+3.Terraform
+4.AWS ECS (Fargate)
+5.AWS RDS (PostgreSQL)
+6.AWS ECR
+
+How to Run Locally
+http://localhost:6400
+
+Deployment (Terraform)
+Initialise Terraform: terraform init
+Apply configuration: terraform apply
+
+Accessing the Application
+After deployment, open:http://18.212.168.138:6400/
+
+Project Structure
+todo/ - Flask API code
+main.tf - Terraform configuration
+Dockerfile - Docker build file
+
+Environment Variables
+SQLALCHEMY_DATABASE_URI - Database connection string
+
+Notes
+Ensure Docker is running before building images
+AWS credentials must be configured
